@@ -223,6 +223,25 @@
         </section>
         <!-- personal section end  -->
 
+        <!-- toster section start -->
+        <section class="d-flex justify-content-center">
+          <button type="button" class="btn text-white bg-danger rounded-pill" id="liveToastBtn">See the offer</button>
+
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <strong class="me-auto">Get special discount</strong>
+              <small>11 mins ago</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              For first order, get 35% off
+            </div>
+          </div>
+        </div>
+        </section>
+        <!-- toster section end -->
+
         <!-- Frequently ask section start  -->
         <section>
           <h2 class="d-flex justify-content-center my-5 fw-bolder">For More Query</h2>
@@ -297,6 +316,20 @@
       </div>
     </footer>
     <!-- footer section end  -->
+    <!-- javaScript start -->
+    <script>
+      var toastTrigger = document.getElementById('liveToastBtn')
+    var toastLiveExample = document.getElementById('liveToast')
+    if (toastTrigger) {
+      toastTrigger.addEventListener('click', function () {
+        var toast = new bootstrap.Toast(toastLiveExample)
+
+        toast.show()
+      })
+    }
+    </script>
+    
+    <!-- javaScript end  -->
     <!-- js scripted  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
